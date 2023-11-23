@@ -1,14 +1,27 @@
 import React from 'react';
-
-function help() {
-  console.log("HELLO");
-}
+import './App.css'
 
 function App() {
   return (
-
-      <button className='btn btn-primary m-5' onClick={help}>HELLO</button>
-
+    <>
+      <form className='new-item-form'>
+        <div className='form-row'>
+          <label htmlFor="item">New Item</label>
+          <input type="text" id='item' />
+        </div>
+        <button className='btn'>Add</button>
+      </form>
+      <h1>Todo List</h1>
+      <ul className='list'>
+        <li>
+          <label htmlFor="">
+            <input type="checkbox" />
+            Item 1
+          </label>
+          <button className='btn btn-danger'>DEL</button>
+        </li>
+      </ul>
+    </>
   );
 }
 
